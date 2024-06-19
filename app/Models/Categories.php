@@ -12,6 +12,6 @@ class Categories extends Model
     protected $fillable = ['name','ctgr_desc'];
 
     public function transactions(){
-        return $this->hasMany(Transactions::class);
+        return $this->hasMany(Product::class, 'id_category');
     }
 }
